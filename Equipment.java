@@ -124,6 +124,17 @@ public class Equipment
 
         // Check that all fields match (name, count, totalWeight, totalPrice, and description):
       
-        // TODO: finish method
+        if(otherEq.getName().equals(this.name)) {
+        	if(otherEq.getCount() == this.count) {
+        		if(otherEq.totalWeight == this.totalWeight) {
+        			if(otherEq.totalPrice == this.totalPrice) {
+        				if(otherEq.getDescription().equals(this.description)) {
+        					return true;
+        				}
+        			}
+        		}
+        	}
+        }
+        return false;
     }
 }

@@ -36,7 +36,7 @@ public class ZooTest{
 	}
 	
 	public void getAverageWeight1Test() throws AssertException{
-		double expected = 80;
+		int expected = 80;
 		Zoo obj = new Zoo(4);
 		Animal ani = new Animal("grey", "t-rex", 30, 32);
 		Animal ani1 = new Animal("grey", "raptor", 130, 40);
@@ -46,12 +46,12 @@ public class ZooTest{
 	}
 	
 	public void getAverageWeight2Test() throws AssertException{
-		double expected = 20;
+		int expected = 20;
 		Zoo obj = new Zoo(4);
-		Animal ani = new Animal("grey", "t-rex", 30, 32);
-		Animal ani1 = new Animal("pink", "raptor", 130, 40);
-		Animal ani2 = new Animal("blue", "turtle", 30, 32);
-		Animal ani3 = new Animal("blue", "bird", 10, 40);
+		Animal ani = new Animal("grey", "t-rex", 30.0, 32);
+		Animal ani1 = new Animal("pink", "raptor", 130.0, 40);
+		Animal ani2 = new Animal("blue", "turtle", 30.0, 32);
+		Animal ani3 = new Animal("blue", "bird", 10.0, 40);
 		obj.addAnimal(ani);
 		obj.addAnimal(ani1);
 		obj.addAnimal(ani2);
@@ -74,7 +74,10 @@ public class ZooTest{
 		expected[1] = ani1;
 		expected[2] = ani2;
 		expected[3] = ani3;
-		Assert.assertEquals(expected, obj.getAnimals());
+		Assert.assertEquals(expected[0], obj.getAnimals()[0]);
+		Assert.assertEquals(expected[1], obj.getAnimals()[1]);
+		Assert.assertEquals(expected[2], obj.getAnimals()[2]);
+		Assert.assertEquals(expected[3], obj.getAnimals()[3]);
 	}
 	
 	public void getCapacityTest() throws AssertException{

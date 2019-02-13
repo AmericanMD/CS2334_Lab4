@@ -29,8 +29,8 @@ public class AnimalTest
 	    // The name should be "tiger", color "unknown", height and weight 0.
 	    Assert.assertEquals("orange", animal.getColor());
 	    Assert.assertEquals("tiger", animal.getName());
-	    Assert.assertEquals(350.0, animal.getHeight(), 0.01);
-	    Assert.assertEquals(36.0, animal.getWeight(), 0.01);
+	    Assert.assertEquals(350.0, animal.getWeight(), 0.01);
+	    Assert.assertEquals(36.0, animal.getHeight(), 0.01);
 	}
 	
 	public void getColorTest() throws AssertException{
@@ -58,7 +58,7 @@ public class AnimalTest
 	}
 	
 	public void toStringTest() throws AssertException{
-		String expected = "cat, a white-colored animal. 13 pounds, 14 inches\n";
+		String expected = "cat, a white-colored animal. 13.0 pounds, 14.0 inches\n";
 		Animal obj = new Animal("white", "cat", 13, 14);
 		Assert.assertTrue(expected.equals(obj.toString()));
 	}

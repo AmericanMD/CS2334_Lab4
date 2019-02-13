@@ -149,8 +149,6 @@ public class Animal
         		}
         	}
         }
-        else {
-        	return false;
-        }
+        return false;
     }
 }

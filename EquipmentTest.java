@@ -5,8 +5,8 @@ public class EquipmentTest{
 		Equipment expected = new Equipment("John/5,346,23,Had a fun ride");
 		Assert.assertTrue("John".equals(obj.getName()));
 	    Assert.assertEquals(5, obj.getCount());
-	    Assert.assertEquals(346, obj.getTotalWeight());
-	    Assert.assertEquals(23, obj.getTotalPrice());
+	    Assert.assertEquals(346.0, obj.getTotalWeight());
+	    Assert.assertEquals(23.0, obj.getTotalPrice());
 	    Assert.assertEquals("Had a fun ride", obj.getDescription());
 	}
 		
@@ -22,12 +22,12 @@ public class EquipmentTest{
 	
 	public void getTotalWeightTest() throws AssertException{
 		Equipment obj = new Equipment("John/5,346,23,Had a fun ride");
-		Assert.assertEquals(346, obj.getTotalWeight());
+		Assert.assertEquals(346.0, obj.getTotalWeight());
 	}
 	
 	public void getTotalPriceTest() throws AssertException{
 		Equipment obj = new Equipment("John/5,346,45,Had a fun ride");
-		Assert.assertEquals(45, obj.getTotalPrice());
+		Assert.assertEquals(45.0, obj.getTotalPrice());
 	}
 	
 	public void getDescriptionTest() throws AssertException{
