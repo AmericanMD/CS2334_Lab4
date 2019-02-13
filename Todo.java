@@ -12,10 +12,16 @@ Tasks:
 5. Write EquipmentTest class
 
 Estimated Time (minutes):
-1. XXX
-2. XXx
+1. 10
+2. 30
+3. 10
+4. 45
+5. 45
 
 Actual Time (minutes):
-1. XXX
-2. XXX
+1. 7
+2. 45
+3. 4
+4. 60
+5. 60
 */}
