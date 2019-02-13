@@ -1,8 +1,8 @@
 /**
  * Class to represent an animal in a zoo. Animals have a color, name, weight, and height.
  *
- * @author Stephen Thung
- * @version 2019-01-23
+ * @author Dennis Case
+ * @version 2019-02-12
  */
 public class Animal
 {
@@ -140,8 +140,17 @@ public class Animal
 
         // Check that all fields match (color, name, weight, height):
         
-        // TODO: finish this...
-        
-        /* return TODO; */
+        if(this.color.equals(otherAni.getColor())) {
+        	if(this.name.equals(otherAni.getName())) {
+        		if(this.weight == otherAni.getWeight()){
+        			if(this.height == otherAni.getHeight()) {
+        				return true;
+        			}
+        		}
+        	}
+        }
+        else {
+        	return false;
+        }
     }
 }
